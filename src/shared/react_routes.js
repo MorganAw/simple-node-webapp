@@ -5,5 +5,5 @@ import { Router, Route } from 'react-router';
 import home_body from './components/home_body';
 
 export default [
-  <Route component={ home_body } path="/" />
+  <Route path="/" component={ home_body } key="home_body" />
 ];

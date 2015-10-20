@@ -3,30 +3,13 @@
   "version": "1.0.0",
   "description": "Simple Node.js Webapp using Express, React, Babel, and Webpack. Meant to be used as super-simplistic boilerplate for experimenting and stuff.",
   "scripts": {
-    "clean": "rm -rf build/compiled && rm -f static/packed.js && rm -rf *.csv",
-    "deploy": "npm run clean && npm run build && gcloud preview app deploy app.yaml --version=test",
-    "build": "./node_modules/.bin/babel src -d ./build/compiled",
+    "clean": "rm -rf build/compiled && rm -f static/packed.js",
+    "deploy": "npm run clean && npm run build",
+    "build": "./node_modules/.bin/babel src -d ./build/compiled && webpack",
     "local": "npm run clean && npm run build && node build/compiled/server/server.js",
     "start": "node build/compiled/server/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/MorganCAw/simple-webapp.git"
-  },
-  "author": {
-    "name": "Morgan Aw",
-    "email": "morgancaw@gmail.com",
-    "url": "http://www.morganaw.com/"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MorganCAw/simple-webapp/issues"
-  },
-  "homepage": "https://github.com/MorganCAw/simple-webapp#readme",
-  "engines": {
-    "node": "^4.1.2"
-  },
-  "dependencies": {
+    "dependencies": {
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "react": "^0.14.0",
@@ -38,5 +21,29 @@
     "babel": "^5.8.23",
     "babel-core": "^5.8.25",
     "webpack": "^1.12.2"
+  },
+  "author": {
+    "name": "Morgan Aw",
+    "email": "morgancaw@gmail.com",
+    "url": "http://www.morganaw.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MorganCAw/simple-webapp.git"
+  },
+  "keywords": [
+    "React",
+    "React-router",
+    "Babel",
+    "Webpack",
+    "isomorphic"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MorganCAw/simple-webapp/issues"
+  },
+  "homepage": "https://github.com/MorganCAw/simple-webapp#readme",
+  "engines": {
+    "node": "^4.1.2"
   }
 }

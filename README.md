@@ -5,7 +5,7 @@ Simple Webapp using Express, React, Babel, and Webpack. Meant to be used as supe
 
 ## How to run
 Pull/Download repository
-`Not quite sure what git command will do this for you`
+```Not quite sure what git command will do this for you```
 
 Running the app
-`npm run local`
+```npm run local```

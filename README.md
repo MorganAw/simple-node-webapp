@@ -10,4 +10,4 @@ Pull/Download repository
 
 Running the app
 
-```npm run local```
+```$ npm run local```

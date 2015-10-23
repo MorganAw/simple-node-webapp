@@ -1,15 +1,24 @@
 import React from 'react';
 
-var home_body = React.createClass({
+export var LoginForm = React.createClass({
   render() {
-    console.log('*** Rendering home_body ***');
+    console.log('***** Rendering login form *****');
     return (
       <div>
-        <h2>Welcome to MCAw's Simple Node Webapp</h2>
-        <p>Looks like stuff is running, time to start experimenting</p>
+        <div id="this_div">L O G I N B O Y S</div>
+        <form action="/login" method="post">
+          <div className="input-group text-center">
+            <input id="webapp_email" maxLength="128" name="webapp_email" placeholder="Email" type="email" />
+          </div>
+        
+          <div className="input-group text-center">
+            <input id="webapp_password" maxLength="128" name="webapp_password" placeholder="Password" type="password" />
+          </div>
+          
+          <input id="login_btn" className="btn" type="submit" value="Sign in"/>
+        </form>
       </div>
+
     );
   }
 });
-
-module.exports = home_body;
